@@ -1,13 +1,16 @@
--- nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
--- nnoremap <C-p> :Telescope git_files find_command=rg,--no-ignore,--hidden,--files<CR>
--- nnoremap <Leader>pf :lua require('telescope.builtin').find_files()<CR>
--- nnoremap <Leader>pl :lua require('telescope.builtin').live_grep()<CR>
--- nnoremap <Leader>pt :Telescope<CR>
+ local builtin = require('telescope.builtin') 
+ local actions = require('telescope.actions')
  
--- nnoremap <leader>pw :lua require('telescope.builtin').grep_string { search = vim.fn.expand("<cword>") }<CR>
--- nnoremap <leader>pb :lua require('telescope.builtin').buffers()<CR>
--- nnoremap <leader>vh :lua require('telescope.builtin').help_tags()<CR>
--- nnoremap <leader>gb :lua require('telescope.builtin').git_branches()<CR>
+ vim.keymap.set("n","<leader>ps", function() builtin.grep_string({ search = vim.fn.input("Grep For > ")}) end)
+ vim.keymap.set("n","<C-p>", builtin.git_files)
+ vim.keymap.set("n","<Leader>pf",builtin.find_files)
+ vim.keymap.set("n","<Leader>pl",builtin.live_grep)
+ vim.keymap.set("n","<Leader>pt", function() vim.cmd(":Telescope") end)
+ 
+ vim.keymap.set("n","<leader>pw",function() builtin.grep_string { search = vim.fn.expand("<cword>") } end)
+ vim.keymap.set("n","<leader>pb",builtin.buffers)
+ vim.keymap.set("n","<leader>vh",builtin.help_tags)
+ vim.keymap.set("n","<leader>gb",builtin.git_branches)
 
 
 --
