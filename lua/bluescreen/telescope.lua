@@ -11,6 +11,7 @@
  vim.keymap.set("n","<leader>pb",builtin.buffers)
  vim.keymap.set("n","<leader>vh",builtin.help_tags)
  vim.keymap.set("n","<leader>gb",builtin.git_branches)
+ vim.keymap.set("n","<leader>r",builtin.lsp_references)
 
 
 --

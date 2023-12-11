@@ -23,6 +23,7 @@ local plugins = {
     {'tpope/vim-fugitive'},
     {'jiangmiao/auto-pairs'},
     {'sheerun/vim-polyglot'},
+    {'prettier/vim-prettier'},
 
     {'nvim-telescope/telescope-ui-select.nvim'},
     {'nvim-telescope/telescope-fzy-native.nvim'},
