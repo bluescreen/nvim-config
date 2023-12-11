@@ -7,12 +7,18 @@ require("harpoon").setup({
     tabline_prefix = "   ",
     tabline_suffix = "   "
 })
+
+vim.cmd('highlight! HarpoonInactive guibg=NONE guifg=#63698c')
 vim.cmd('highlight! HarpoonActive guibg=NONE guifg=white')
+vim.cmd('highlight! HarpoonNumberActive guibg=NONE guifg=#7aa2f7')
+vim.cmd('highlight! HarpoonNumberInactive guibg=NONE guifg=#7aa2f7')
+vim.cmd('highlight! TabLineFill guibg=NONE guifg=white')
+
 vim.keymap.set('n', "<leader>a", mark.add_file)
-vim.keymap.set('n', "<C-h>", ui.nav_file(1))
-vim.keymap.set('n', "<C-j>", ui.nav_file(2))
-vim.keymap.set('n', "<C-k>", ui.nav_file(3))
-vim.keymap.set('n', "<C-l>", ui.nav_file(4))
-vim.keymap.set('n', "<C-ö>", ui.nav_file(5))
-vim.keymap.set('n', "<C-ä>", ui.nav_file(6))
+vim.keymap.set('n', "<C-h>", function() ui.nav_file(1) end)
+vim.keymap.set('n', "<C-j>", function() ui.nav_file(2) end)
+vim.keymap.set('n', "<C-k>", function() ui.nav_file(3) end)
+vim.keymap.set('n', "<C-l>", function() ui.nav_file(4) end)
+vim.keymap.set('n', "<C-ö>", function() ui.nav_file(5) end)
+vim.keymap.set('n', "<C-ä>", function() ui.nav_file(6) end)
 vim.keymap.set('n', "<C-g>", ui.toggle_quick_menu)

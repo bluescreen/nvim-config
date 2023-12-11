@@ -1,2 +1,2 @@
-require("mmuschol")
+require("bluescreen")
 
