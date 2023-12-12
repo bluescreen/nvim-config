@@ -1,2 +1,12 @@
-vim.g.prettier_autoformat = 1
-vim.g.prettier_autoformat_require_pragma = 0
+
+require("conform").setup({
+    format_on_save = {
+        timeout_ms = 500,
+        lsp_fallback = true,
+    },
+    formatters_by_ft = {
+      lua = { "stylua" },
+      python = { "isort", "black" },
+      javascript = { { "prettierd", "prettier" } },
+    },
+  })
