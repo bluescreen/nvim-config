@@ -16,14 +16,15 @@ local plugins = {
     {'nvim-lua/popup.nvim'},
 
     -- Default Vim Plugins
-    {'scrooloose/nerdtree'},
+    {'scrooloose/nerdtree', event = "VeryLazy"},
     {'airblade/vim-gitgutter'},
     {'vim-airline/vim-airline'},
     {'tpope/vim-surround'},
-    {'tpope/vim-fugitive'},
+    {'tpope/vim-fugitive', event = "VeryLazy"},
+    {'tpope/vim-commentary'},
     {'jiangmiao/auto-pairs'},
-    {'sheerun/vim-polyglot'},
-    {'mbbill/undotree'},
+    {'sheerun/vim-polyglot', event = "VeryLazy"},
+    {'mbbill/undotree', event = "VeryLazy"},
 
 
     -- Fun Stuff 
@@ -73,6 +74,7 @@ local plugins = {
     -- Folke
     {"folke/tokyonight.nvim",lazy = false,priority = 1000,opts = {}},
     {'folke/trouble.nvim'},
+    {'folke/which-key.nvim', event = "VeryLazy"},
     {'folke/zen-mode.nvim', opts = {window ={ options = {number = true, relativenumber = true}}}},
     {
       "folke/persistence.nvim",
@@ -80,16 +82,16 @@ local plugins = {
     },
 
     -- TJ
-    {'nvim-telescope/telescope-ui-select.nvim'},
-    {'nvim-telescope/telescope-fzy-native.nvim'},
+    {'nvim-telescope/telescope-ui-select.nvim', event = "VeryLazy"},
+    {'nvim-telescope/telescope-fzy-native.nvim', event = "VeryLazy"},
     {'nvim-telescope/telescope.nvim', tag = '0.1.5', dependencies = { 'nvim-lua/plenary.nvim' }},
 
 
     -- Prime Plugins
-    {'ThePrimeagen/harpoon'},
-    {'ThePrimeagen/refactoring.nvim'},
-    {'ThePrimeagen/vim-be-good'},
-    {'ThePrimeagen/git-worktree.nvim'},
+    {'ThePrimeagen/harpoon', event = "VeryLazy"},
+    {'ThePrimeagen/refactoring.nvim', event = "VeryLazy"},
+    {'ThePrimeagen/vim-be-good', event = "VeryLazy"},
+    {'ThePrimeagen/git-worktree.nvim', event = "VeryLazy"},
 
     -- LSP
 
@@ -99,17 +101,17 @@ local plugins = {
     {'neovim/nvim-lspconfig'},
     {'hrsh7th/cmp-nvim-lsp'},
     {'hrsh7th/nvim-cmp'},
-    {'L3MON4D3/LuaSnip'},
+    {'L3MON4D3/LuaSnip', event = "VeryLazy"},
 
     -- Theme
     {'kyazdani42/nvim-web-devicons'},
 
 
     -- Tresitter
-    {'nvim-treesitter/nvim-treesitter'},
-    {'nvim-treesitter/nvim-treesitter-context'},
-    {'nvim-treesitter/playground'},
-    {'nvim-treesitter/nvim-treesitter-textobjects'},
+    {'nvim-treesitter/nvim-treesitter', event = "VeryLazy"},
+    {'nvim-treesitter/nvim-treesitter-context', event = "VeryLazy"},
+    {'nvim-treesitter/playground', event = "VeryLazy"},
+    {'nvim-treesitter/nvim-treesitter-textobjects', event = "VeryLazy"},
 }
 local opts = {}
 
